@@ -8,20 +8,19 @@ const ToDoList = () => {
     const INITIAL_STATE = []
     const [toDo, setToDo] = useState(INITIAL_STATE)
 
-    const addData = (task) => {
-        setToDo(toDo => [...toDo, { task: task }])
+    const addData = (task, id) => {
+        setToDo(toDo => [...toDo, { task: task, id: id }])
     }
 
     const removeTask = (e) => {
-        console.log(e.target.parentElement)
-        console.log('removing taskfrom toDo')
 
+        setToDo(toDo => toDo.filter(t => t.id != e.target.parentElement.id))
     }
     return (
         <div>
             <ToDoForm addData={addData} />
             <ul>
-                {toDo.map(t => <ToDo task={t.task} key={uuid()} removeTask={removeTask} />)}
+                {toDo.map(t => <ToDo task={t.task} key={t.id} id={t.id} removeTask={removeTask} />)}
             </ul>
         </div>
 

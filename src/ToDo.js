@@ -1,9 +1,9 @@
 import React from "react";
 
-const ToDo = ({ task, removeTask }) => {
+const ToDo = ({ task, id, removeTask }) => {
 
     return (
-        <li>{task} <button onClick={removeTask}>X</button></li>
+        <li id={id}>{task} <button onClick={removeTask}>X</button></li>
     )
 
 

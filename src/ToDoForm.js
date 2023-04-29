@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid"
 
 const ToDoForm = ({ addData }) => {
     const INITIAL_STATE = {
@@ -11,11 +12,13 @@ const ToDoForm = ({ addData }) => {
             ...formData,
             [name]: value
         }))
+
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addData(formData.task)
+        addData(formData.task, uuid())
+        setFormData(INITIAL_STATE)
     }
     return (
         <form onSubmit={handleSubmit}>

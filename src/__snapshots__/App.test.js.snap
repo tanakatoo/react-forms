@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ToDo same as fragment 1`] = `
+<DocumentFragment>
+  <li>
+     
+    <button>
+      X
+    </button>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ToDoForm same as fragment 1`] = `
+<DocumentFragment>
+  <form>
+    <label
+      for="task"
+    >
+      Task
+    </label>
+    <input
+      id="task"
+      name="task"
+      type="text"
+      value=""
+    />
+    <button>
+      Add
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`ToDoList same as fragment 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <label
+        for="task"
+      >
+        Task
+      </label>
+      <input
+        id="task"
+        name="task"
+        type="text"
+        value=""
+      />
+      <button>
+        Add
+      </button>
+    </form>
+    <ul />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`if Box matches snapshot 1`] = `
 <DocumentFragment>
   <div
